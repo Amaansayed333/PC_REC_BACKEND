@@ -183,7 +183,7 @@ def get_direct_recommendations(user_input: dict) -> Union[List[Dict[str, Any]], 
     prompt = build_direct_prompt(user_input)
     try:
         response = client.chat.complete(
-            model="mistral-large",
+            model="open-mistral-7b",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.2,
             max_tokens=900,
